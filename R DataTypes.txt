@@ -1,0 +1,107 @@
+########################
+Author: Manoj
+Date: 19/12/2018
+course: Revolution Analytics (R)
+#######################
+
+R Data Types
+
+Everything in R is an object.
+* Variables are nothing but reserved memory locations to store values. This means that, when you create a variable you reserve some space in memory.
+* in R, the variables are not declared as some data type
+* The variables are assigned with R-Objects and the data type of the R-object becomes the data type of the variable
+* types of R-objects
+	->	Vectors
+	->	Lists
+	->	Matrices
+	->	Arrays
+	->	Factors
+	->	Data Frames
+
+Vectors
+A vector is the most common and basic data structure in R and is pretty much the workhorse of R. Vectors can be of two types:
+
+	* atomic vectors
+	* lists
+	
+Atomic Vectors A vector can be a vector of characters, logical, integers or numeric.
+R has 5 basic atomic classes
+
+	logical (e.g., TRUE, FALSE)
+	integer (e.g,, 2L,3L, as.integer(3))
+	numeric (real or decimal) (e.g, 2, 2.0,11.2,23.5, pi)
+	complex (e.g, 1 + 0i, 1 + 4i)
+	character (e.g, "hello", "world","a","b")
+	Raw ("Hello" is stored as 48 65 6c 6c 6f)
+	
+* Each object has an attribute. Attributes can be part of an object of R. These include
+
+	names
+	dimnames
+	length
+	class
+	attributes (contain metadata)
+
+	
+Lists
+	* A list is an R-object which can contain many different types of elements inside it like vectors, functions and even another list inside it
+
+	* In R lists act as containers. Unlike atomic vectors, its contents are not restricted to a single mode and can encompass any data type. 
+	* Lists are sometimes called recursive vectors, because a list can contain other lists. This makes them fundamentally different from atomic vectors
+
+	* List is a special vector. Each element can be a different class
+	* Create lists using list or coerce other objects using as.list()
+
+Matrices
+	* A matrix is a two-dimensional rectangular data set. It can be created using a vector input to the matrix function.
+	* Matrices are a special vector in R. They are not a separate class of object but simply a vector but now with dimensions added on to it. 
+		Matrices have rows and columns.
+	
+Arrays
+* While matrices are confined to two dimensions, arrays can be of any number of dimensions. 
+* The array function takes a dim attribute which creates the required number of dimension
+
+
+Data Frames
+* Data frames are tabular data objects. Unlike a matrix in data frame each column can contain different modes of data. 
+* The first column can be numeric while the second column can be character and third column can be logical. 
+* It is a list of vectors of equal length.
+* Data Frames are created using the data.frame() function.
+
+Factors
+* Factors are the r-objects which are created using a vector. 
+* It stores the vector along with the distinct values of the elements in the vector as labels. 
+* The labels are always character irrespective of whether it is numeric or character or Boolean etc. in the input vector. 
+* They are useful in statistical modeling.
+
+* Factors are created using the factor() function. The nlevels functions gives the count of levels.
+
+* Factors are special vectors that represent categorical data. Factors can be ordered or unordered and are important when for modelling functions such as lm() and glm() and also in plot methods.
+ 
+* Factors can only contain pre-defined values.
+ 
+* Factors are pretty much integers that have labels on them. While factors look (and often behave) like character vectors, they are actually integers under the hood, and you need to be careful when treating them like strings. Some string methods will coerce factors to strings, while others will throw an error.
+ 
+* Sometimes factors can be left unordered. Example: male, female
+ 
+* Other times you might want factors to be ordered (or ranked). Example: low, medium, high.
+ 
+* Underlying it's represented by numbers 1,2,3.
+ 
+* They are better than using simple integer labels because factors are what are called self describing. male and female is more descriptive than 1s and 2s. Helpful when there is no additional metadata.
+ 
+* Which is male? 1 or 2? You wouldn't be able to tell with just integer data. Factors have this information built in.
+ 
+* Factors can be created with factor(). Input is a character vector.
+
+
+
+
+
+
+
+
+
+
+
+
