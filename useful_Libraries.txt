@@ -1,0 +1,6 @@
+#most of the libraries needed
+library(dplyr) #data manipulation
+library(ggplot2) #visualizations
+library(gridExtra) #viewing multiple plots together
+library(tidytext) #text mining
+library(wordcloud2) #creative visualizations
